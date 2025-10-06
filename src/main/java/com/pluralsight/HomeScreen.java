@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HomeScreen {
 
-    public static Book[] books = new Book[20];
+    public static Book[] books = new Book[6];
 
     public static void main(String[] args) {
 
@@ -22,7 +22,7 @@ public class HomeScreen {
 
             // display options
             System.out.println("Welcome to the Neighborhood Library App!" +
-                    "\n Choose from the following options\n");
+                    "\nChoose from the following options\n");
             System.out.println("1 - Show Available Books");
             System.out.println("2 - Show Checked Out Books");
             System.out.println("3 - Exit");
@@ -34,7 +34,7 @@ public class HomeScreen {
 
             switch (command) {
                 case 1:
-                    //new AvailableBooks.menu(books);
+                    AvailableBooks.menu(books);
                     break;
                 case 2:
                     //new CheckedOutBooks.menu(books);
