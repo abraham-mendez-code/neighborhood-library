@@ -61,16 +61,10 @@ public class CheckedOutBooks {
 
         // check each book
         for (int i = 0; i < books.length; i++) {
-            // search for selection match in ID, ISBN or Title
-            if (String.valueOf(books[i].getId()).equalsIgnoreCase(selection) || selection.equalsIgnoreCase(books[i].getIsbn()) || selection.equalsIgnoreCase(books[i].getTitle()) ) {
-                // get a name and check out the book
-                System.out.println("Enter your name");
-                String name = input.nextLine();
-
-                books[i].checkOut(name);
-
-                // print confirmation and validate input
-                System.out.printf("%s was checked out by %s\n", books[i].getTitle(), books[i].getCheckedOutTo());
+            // search for match in ID
+            if (id == books[i].getId())  {
+                //check in book
+                books[i].checkIn();
                 return true;
             }
         }
