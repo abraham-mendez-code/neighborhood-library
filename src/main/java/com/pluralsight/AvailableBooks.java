@@ -16,22 +16,20 @@ public class AvailableBooks {
         while (!validated) {
 
             System.out.println("Choose from the following options");
-            System.out.println("1 - Check out a book");
-            System.out.println("2 - Exit");
+            System.out.println("C - Check out a book");
+            System.out.println("X - Exit");
 
-            int command = input.nextInt();
+            String command = input.nextLine();
 
-            switch (command) {
-                case 1:
-                    // clear buffer
-                    input.nextLine();
+            switch (command.toLowerCase().indexOf(0)) {
+                case 'c':
 
                     System.out.println("Select a book");
                     String selection = input.nextLine();
 
                     validated = findSelection(selection, books);
                     break;
-                case 2:
+                case 'x':
                     return;
                 default:
                     System.out.println("Invalid input detected. Try (1 or 2)");
