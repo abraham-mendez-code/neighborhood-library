@@ -19,9 +19,10 @@ public class AvailableBooks {
             System.out.println("C - Check out a book");
             System.out.println("X - Exit");
 
-            String command = input.nextLine();
+            String c = input.nextLine();
+            char command = c.toLowerCase().charAt(0);
 
-            switch (command.toLowerCase().indexOf(0)) {
+            switch (command) {
                 case 'c':
 
                     System.out.println("Select a book");
