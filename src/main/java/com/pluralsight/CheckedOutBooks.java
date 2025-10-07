@@ -19,10 +19,12 @@ public class CheckedOutBooks {
             System.out.println("C - Check In a book");
             System.out.println("X - Return to home");
 
-            String command = input.nextLine();
+            // store only the first character in lowercase form
+            char command = input.nextLine().charAt(0);
+            command = Character.toLowerCase(command);
 
-            switch (command.toLowerCase()) {
-                case 'c:
+            switch (command) {
+                case 'c':
                     // clear buffer
                     input.nextLine();
 
