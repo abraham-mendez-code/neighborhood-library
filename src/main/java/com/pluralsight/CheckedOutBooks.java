@@ -20,16 +20,16 @@ public class CheckedOutBooks {
             System.out.println("X - Return to home");
 
             // store only the first character in lowercase form
-            char command = input.nextLine().charAt(0);
-            command = Character.toLowerCase(command);
+            String c = input.nextLine();
+            char command = c.toLowerCase().charAt(0);
 
             switch (command) {
                 case 'c':
-                    // clear buffer
-                    input.nextLine();
 
                     System.out.println("Enter the ID");
                     int id = input.nextInt();
+                    // clear buffer
+                    input.nextLine();
 
                     validated = findSelection(id, books);
                     break;

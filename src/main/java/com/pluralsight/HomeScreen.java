@@ -21,7 +21,7 @@ public class HomeScreen {
             Scanner input = new Scanner(System.in);
 
             // display options
-            System.out.println("Welcome to the Neighborhood Library App!" +
+            System.out.println("Homepage" +
                     "\nChoose from the following options\n");
             System.out.println("1 - Show Available Books");
             System.out.println("2 - Show Checked Out Books");
@@ -37,7 +37,7 @@ public class HomeScreen {
                     AvailableBooks.menu(books);
                     break;
                 case 2:
-                    //new CheckedOutBooks.menu(books);
+                    CheckedOutBooks.menu(books);
                     break;
                 case 3:
                     return;
