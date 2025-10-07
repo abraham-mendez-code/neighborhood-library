@@ -75,7 +75,7 @@ public class AvailableBooks {
             }
         }
         // book not found
-        System.out.println("Book not");
+        System.out.println("Book not found");
         return false;
 
     }
